@@ -1,0 +1,946 @@
+fileFormatVersion: 2
+guid: 125b649f16c4e6343a8453f4c3ea7c5e
+timeCreated: 1446918572
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MegamanSprites_0
+    21300002: MegamanSprites_1
+    21300004: MegamanSprites_2
+    21300006: MegamanSprites_3
+    21300008: MegamanSprites_4
+    21300010: MegamanSprites_5
+    21300012: MegamanSprites_6
+    21300014: MegamanSprites_7
+    21300016: MegamanSprites_8
+    21300018: MegamanSprites_9
+    21300020: MegamanSprites_10
+    21300022: MegamanSprites_11
+    21300024: MegamanSprites_12
+    21300026: MegamanSprites_13
+    21300028: MegamanSprites_14
+    21300030: MegamanSprites_15
+    21300032: MegamanSprites_16
+    21300034: MegamanSprites_17
+    21300036: MegamanSprites_18
+    21300038: MegamanSprites_19
+    21300040: MegamanSprites_20
+    21300042: MegamanSprites_21
+    21300044: MegamanSprites_22
+    21300046: MegamanSprites_23
+    21300048: MegamanSprites_24
+    21300050: MegamanSprites_25
+    21300052: MegamanSprites_26
+    21300054: MegamanSprites_27
+    21300056: MegamanSprites_28
+    21300058: MegamanSprites_29
+    21300060: MegamanSprites_30
+    21300062: MegamanSprites_31
+    21300064: MegamanSprites_32
+    21300066: MegamanSprites_33
+    21300068: MegamanSprites_34
+    21300070: MegamanSprites_35
+    21300072: MegamanSprites_36
+    21300074: MegamanSprites_37
+    21300076: MegamanSprites_38
+    21300078: MegamanSprites_39
+    21300080: MegamanSprites_40
+    21300082: MegamanSprites_41
+    21300084: MegamanSprites_42
+    21300086: MegamanSprites_43
+    21300088: MegamanSprites_44
+    21300090: MegamanSprites_45
+    21300092: MegamanSprites_46
+    21300094: MegamanSprites_47
+    21300096: MegamanSprites_48
+    21300098: MegamanSprites_49
+    21300100: MegamanSprites_50
+    21300102: MegamanSprites_51
+    21300104: MegamanSprites_52
+    21300106: MegamanSprites_53
+    21300108: MegamanSprites_54
+    21300110: MegamanSprites_55
+    21300112: MegamanSprites_56
+    21300114: MegamanSprites_57
+    21300116: MegamanSprites_58
+    21300118: MegamanSprites_59
+    21300120: MegamanSprites_60
+    21300122: MegamanSprites_61
+    21300124: MegamanSprites_62
+    21300126: MegamanSprites_63
+    21300128: MegamanSprites_64
+    21300130: MegamanSprites_65
+    21300132: MegamanSprites_66
+    21300134: MegamanSprites_67
+    21300136: MegamanSprites_68
+    21300138: MegamanSprites_69
+    21300140: MegamanSprites_70
+    21300142: MegamanSprites_71
+    21300144: MegamanSprites_72
+    21300146: MegamanSprites_73
+    21300148: MegamanSprites_74
+    21300150: MegamanSprites_75
+    21300152: MegamanSprites_76
+    21300154: MegamanSprites_77
+    21300156: MegamanSprites_78
+    21300158: MegamanSprites_79
+    21300160: MegamanSprites_80
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MegamanSprites_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 375
+        width: 18
+        height: 11
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 375
+        width: 18
+        height: 17
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 375
+        width: 18
+        height: 19
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_3
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 375
+        width: 18
+        height: 21
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_4
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 375
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_5
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 375
+        width: 21
+        height: 20
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 376
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_7
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 375
+        width: 18
+        height: 15
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_8
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 369
+        width: 21
+        height: 24
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_9
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 369
+        width: 21
+        height: 24
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_10
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 353
+        width: 18
+        height: 8
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_11
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 353
+        width: 12
+        height: 8
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_12
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 350
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 353
+        width: 11
+        height: 11
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_14
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 347
+        width: 8
+        height: 18
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_15
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 353
+        width: 8
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_16
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 350
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_17
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 353
+        width: 11
+        height: 11
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 330
+        width: 18
+        height: 8
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_19
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 330
+        width: 12
+        height: 8
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_20
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 327
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_21
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 327
+        width: 11
+        height: 11
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_22
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 327
+        width: 8
+        height: 17
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_23
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 327
+        width: 8
+        height: 11
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_24
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 327
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_25
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 327
+        width: 11
+        height: 11
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_26
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 271
+        width: 64
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_27
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 269
+        width: 64
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_28
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 269
+        width: 18
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_29
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 269
+        width: 18
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_30
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 282
+        width: 6
+        height: 6
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_31
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 220
+        width: 28
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_32
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 220
+        width: 28
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_33
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 220
+        width: 30
+        height: 29
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_34
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 220
+        width: 28
+        height: 35
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_35
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 220
+        width: 29
+        height: 35
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_36
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 220
+        width: 28
+        height: 35
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_37
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 202
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_38
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 205
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_39
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 190
+        width: 32
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_40
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 196
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_41
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 199
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_42
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 144
+        width: 31
+        height: 29
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_43
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 145
+        width: 31
+        height: 35
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_44
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 145
+        width: 25
+        height: 35
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_45
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 145
+        width: 29
+        height: 33
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_46
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 145
+        width: 28
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_47
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 145
+        width: 32
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_48
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 166
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_49
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 146
+        width: 8
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_50
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 109
+        width: 30
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_51
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 109
+        width: 22
+        height: 29
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_52
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 109
+        width: 20
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_53
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 109
+        width: 37
+        height: 26
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_54
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 109
+        width: 31
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_55
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 109
+        width: 34
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_56
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 109
+        width: 28
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_57
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 109
+        width: 29
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_58
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 109
+        width: 31
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_59
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 109
+        width: 28
+        height: 29
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_60
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 131
+        width: 8
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_61
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 123
+        width: 8
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_62
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 109
+        width: 19
+        height: 19
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_63
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 108
+        width: 19
+        height: 19
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_64
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 116
+        width: 24
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_65
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 108
+        width: 24
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_66
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 62
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_67
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 62
+        width: 22
+        height: 29
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_68
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 62
+        width: 20
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_69
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 62
+        width: 37
+        height: 26
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_70
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 62
+        width: 30
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_71
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 62
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_72
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 62
+        width: 26
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_73
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 62
+        width: 31
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_74
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 63
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_75
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 7
+        width: 46
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_76
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 7
+        width: 46
+        height: 44
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_77
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 8
+        width: 13
+        height: 25
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_78
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 8
+        width: 13
+        height: 26
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_79
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 10
+        width: 23
+        height: 24
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MegamanSprites_80
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 10
+        width: 23
+        height: 24
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
