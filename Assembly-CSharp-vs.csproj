@@ -57,6 +57,9 @@
      <Compile Include="Assets\Scripts\Character\MainCharacter_Movement.cs" />
      <Compile Include="Assets\Scripts\Projectiles\Sin.cs" />
      <Compile Include="Assets\Scripts\Projectiles\SinCollider.cs" />
+     <Compile Include="Assets\Scripts\Tau\Tau.cs" />
+     <Compile Include="Assets\Scripts\Tau\Tau_FieldsAndEvents.cs" />
+     <Compile Include="Assets\Scripts\Tau\Tau_Sphere.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Programas/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

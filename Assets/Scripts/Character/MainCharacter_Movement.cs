@@ -41,7 +41,7 @@ public partial class MainCharacter : MonoBehaviour
 	private void CheckJump()
 	{
 		// we can only jump whilst grounded
-		if( _controller.isGrounded && JumpButtonPressed ())
+		if( _controller.isGrounded && JumpButtonPressed () && !DropJumpButtonPressed ())
 		{
 			Jump (jumpHeight);
 		}
@@ -91,6 +91,17 @@ public partial class MainCharacter : MonoBehaviour
 		transform.localScale = transform.localScale * (-1);
 		gravity = gravity * (-1);
 		_controller.isGravityDown = !_controller.isGravityDown;
+
+		Invoke("InvertGravityCameraAdjustment", 0.8f);
+	}
+
+	private void InvertGravityCameraAdjustment()
+	{
+		SmoothFollow sf = GameObject.FindObjectOfType<SmoothFollow>();
+		if(sf != null)
+		{
+			sf.cameraOffset.y *= -1;
+		}
 	}
 
 	private void CheckFallingAnimation()

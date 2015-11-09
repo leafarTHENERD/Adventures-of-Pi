@@ -1,17 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Character\Engineer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tau\Tau_Sphere.cs">
     <Files>
-      <File FileName="Assets\Scripts\Character\MainCharacter.cs" Line="19" Column="20" />
-      <File FileName="Assets\Scripts\Character\MainCharacter_Fields.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character\MainCharacter_Events.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character\MainCharacter_Movement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character\MainCharacter_Input.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character\Engineer.cs" Line="57" Column="9" />
-      <File FileName="Assets\Scripts\Character\Engineer_Events.cs" Line="41" Column="9" />
-      <File FileName="Assets\Scripts\Projectiles\Sin.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Projectiles\SinCollider.cs" Line="1" Column="1" />
-      <File FileName="Assets\Addons\CharacterController2D\CharacterController2D.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tau\Tau.cs" Line="104" Column="20" />
+      <File FileName="Assets\Scripts\Tau\Tau_Sphere.cs" Line="105" Column="110" />
+      <File FileName="Assets\Scripts\Character\MainCharacter_Movement.cs" Line="44" Column="82" />
+      <File FileName="Assets\Scripts\Tau\Tau_FieldsAndEvents.cs" Line="12" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
