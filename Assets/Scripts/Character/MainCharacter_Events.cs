@@ -33,40 +33,16 @@ public partial class MainCharacter : MonoBehaviour
 	{
 		//Debug.Log( "onTriggerEnterEvent: " + col.gameObject.name );
 
-		if(col.gameObject.transform.CompareTag("Cossine"))
+		if(col.gameObject.CompareTag("Cossine"))
 		{
 			InvertGravity ();
 		}
-		else if(col.gameObject.transform.CompareTag("EnemyProjectiles"))
+		else if(col.gameObject.CompareTag("EnemyProjectiles"))
 		{
-			Application.LoadLevel(Application.loadedLevel);
+			Die ();
 		}
-		else if(col.gameObject.transform.parent != null)
-		{
-			if(col.gameObject.transform.parent.CompareTag("Enemy"))
-			{
-				Engineer e = col.gameObject.transform.parent.GetComponent<Engineer>();
-				if(e != null)
-				{
-					if(!_controller.isGrounded)
-					{
-						if(e.isActive)
-						{
-							Jump (jumpHeight * 1.3f);
-						}
-						else
-						{
-							Jump (jumpHeight * 0.7f);
-						}
-						e.GotHit ();
-					}
-					else if(e.isActive)
-					{
-						Application.LoadLevel(Application.loadedLevel);
-					}
-				}
-			}
-		}
+
+		CheckEnemiesHit (col.gameObject);
 	}
 	
 	

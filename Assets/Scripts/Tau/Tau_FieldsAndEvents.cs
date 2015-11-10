@@ -15,6 +15,7 @@ public partial class Tau : MonoBehaviour
 	
 	void Start () 
 	{
+		_myAmImmune = false;
 		_myDoneFirstCicle = false;
 		_myAnimator = GetComponent<Animator>();
 		ExecutePhase = PhaseNULL;
@@ -33,6 +34,9 @@ public partial class Tau : MonoBehaviour
 
 	[Header("Boss Values")]
 	public BossPhase currentPhase;
+	public int bossMaxHealth;
+	public int bossCurrentHealth;
+	public float immunityTime;
 
 	[Header("Object References")]
 	public Tau_Sphere[] bigSpheres;
@@ -62,5 +66,24 @@ public partial class Tau : MonoBehaviour
 			return !_myDoneFirstCicle;
 		}
 	}
+	private bool _myAmImmune;
+	public bool IsImmune
+	{
+		get
+		{
+			return _myAmImmune;
+		}
+	}
 
+	public void GotHit()
+	{
+		bossCurrentHealth = bossCurrentHealth - 1;
+		_myAmImmune = true;
+		Invoke("LoseImmunity", immunityTime);
+	}
+
+	private void LoseImmunity()
+	{
+		_myAmImmune = false;
+	}
 }

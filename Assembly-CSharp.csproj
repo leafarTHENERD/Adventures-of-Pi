@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Character\Engineer.cs" />
      <Compile Include="Assets\Scripts\Character\Engineer_Events.cs" />
      <Compile Include="Assets\Scripts\Character\MainCharacter.cs" />
+     <Compile Include="Assets\Scripts\Character\MainCharacter_Combat.cs" />
      <Compile Include="Assets\Scripts\Character\MainCharacter_Events.cs" />
      <Compile Include="Assets\Scripts\Character\MainCharacter_Fields.cs" />
      <Compile Include="Assets\Scripts\Character\MainCharacter_Input.cs" />
