@@ -18,6 +18,7 @@ public partial class Engineer : MonoBehaviour
 	private Animator _animator;
 	//private RaycastHit2D _lastControllerColliderHit;
 	private Vector3 _velocity;
+	private float _myShootOffset;
 
 	public GameObject projectileObject;
 	public float firstShootTime;
@@ -37,6 +38,8 @@ public partial class Engineer : MonoBehaviour
 		_controller.onControllerCollidedEvent += onControllerCollider;
 		_controller.onTriggerEnterEvent += onTriggerEnterEvent;
 		_controller.onTriggerExitEvent += onTriggerExitEvent;
+
+		_myShootOffset = IsFacingRight() ? 0.5f : -0.5f;
 
 		Invoke("Shoot", firstShootTime);
 	}

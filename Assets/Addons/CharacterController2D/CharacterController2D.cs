@@ -569,7 +569,16 @@ public class CharacterController2D : MonoBehaviour
 	#endregion
 
 	#region BY EDER
-	public bool isGravityDown = true;
+	
+		public bool isGravityDown = true;
+
+		public bool BecameGroundedThisFrame
+		{
+			get
+			{
+				return collisionState.becameGroundedThisFrame;
+			}
+		}
 
 	#endregion
 	

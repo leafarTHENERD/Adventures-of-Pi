@@ -16,7 +16,7 @@ public partial class MainCharacter : MonoBehaviour
 		if( transform.localScale.x < 0f )
 			transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
 		
-		if( _controller.isGrounded )
+		if( _controller.isGrounded && !_myWaitingForJumpAnticipationAnimation )
 			_animator.Play( Animator.StringToHash( _myAnimationWalking ) );
 	}
 
@@ -26,7 +26,7 @@ public partial class MainCharacter : MonoBehaviour
 		if( transform.localScale.x > 0f )
 			transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
 		
-		if( _controller.isGrounded )
+		if( _controller.isGrounded && !_myWaitingForJumpAnticipationAnimation )
 			_animator.Play( Animator.StringToHash( _myAnimationWalking ) );
 	}
 
@@ -34,16 +34,22 @@ public partial class MainCharacter : MonoBehaviour
 	{
 		normalizedHorizontalSpeed = 0;
 		
-		if( _controller.isGrounded )
+		if( _controller.isGrounded && !_myWaitingForJumpAnticipationAnimation)
 			_animator.Play( Animator.StringToHash( _myAnimationIdle ) );
 	}
 
 	private void CheckJump()
 	{
-		// we can only jump whilst grounded
-		if( _controller.isGrounded && JumpButtonPressed () && !DropJumpButtonPressed ())
+		if(_myJumpNextFrame)
 		{
 			Jump (jumpHeight);
+		}
+		// we can only jump whilst grounded
+		else if( _controller.isGrounded && JumpButtonPressed () && !DropJumpButtonPressed () && !_myWaitingForJumpAnticipationAnimation)
+		{
+			_animator.Play( Animator.StringToHash( _myAnimationJumping ) );
+			Invoke("JumpNextFrame", 0.05f);
+			_myWaitingForJumpAnticipationAnimation = true;
 		}
 		else if(!_controller.isGrounded && JumpButtonReleased ())
 		{
@@ -51,22 +57,27 @@ public partial class MainCharacter : MonoBehaviour
 		}
 	}
 
+	private void JumpNextFrame()
+	{
+		_myJumpNextFrame = true;
+	}
+
 	private void Jump(float height)
 	{
-		#region BY EDER
+		_myWaitingForJumpAnticipationAnimation = false;
+		_myJumpNextFrame = false;
 		_velocity.y = height * Mathf.Abs(gravity);
 		_velocity.y = 2.0f * _velocity.y;
 		_velocity.y = Mathf.Sqrt(_velocity.y);
 		if(gravity > 0)
 			_velocity.y = _velocity.y * (-1.0f);
 		//Debug.Log("JUMP POWER="+_velocity.y);
-		_animator.Play( Animator.StringToHash( _myAnimationJumping ) );
-		#endregion
 	}
 
 	private void CutOffJump()
 	{
-		_velocity.y *= 0.4f;
+		if(!_myWaitingForJumpAnticipationAnimation)
+			_velocity.y *= 0.4f;
 	}
 
 	private void CheckDropJump()
@@ -106,7 +117,12 @@ public partial class MainCharacter : MonoBehaviour
 
 	private void CheckFallingAnimation()
 	{
-		if(!_controller.isGrounded)
+		if(_controller.BecameGroundedThisFrame)
+		{
+			_animator.Play( Animator.StringToHash( _myAnimationTouchingTheGround ) );
+			WaitForAnimation ();
+		}
+		else if(!_controller.isGrounded)
 		{
 			if(_controller.isGravityDown)
 			{
@@ -131,7 +147,7 @@ public partial class MainCharacter : MonoBehaviour
 		_controller.move( _velocity * Time.deltaTime );
 	}
 
-	private void StoreThisFrameMovementSpeed()
+	private void StoreThisFrameMovementData()
 	{
 		// grab our current _velocity to use as a base for all calculations
 		_velocity = _controller.velocity;

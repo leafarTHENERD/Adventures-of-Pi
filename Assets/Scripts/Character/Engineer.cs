@@ -48,6 +48,7 @@ public partial class Engineer : MonoBehaviour
 				s.verticalCicle = projectileVerticalOscilation;
 			}
 			Vector3 pos = transform.position;
+			pos.x += _myShootOffset;
 			pos.y += GetComponent<SpriteRenderer>().bounds.size.y/2.0f;
 			go.transform.position = pos;
 			if(!IsFacingRight())

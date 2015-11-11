@@ -13,6 +13,11 @@ public partial class MainCharacter : MonoBehaviour
 		_controller.onControllerCollidedEvent += onControllerCollider;
 		_controller.onTriggerEnterEvent += onTriggerEnterEvent;
 		_controller.onTriggerExitEvent += onTriggerExitEvent;
+
+		_myWaitingForJumpAnticipationAnimation = false;
+		_myJumpNextFrame = false;
+		_myWasGroundedLastFrame = false;
+		_myWaitingAnimation = false;
 	}
 	
 	
@@ -52,4 +57,17 @@ public partial class MainCharacter : MonoBehaviour
 	}
 	
 	#endregion
+
+
+	//Animation
+	private void WaitForAnimation()
+	{
+		if(_myWaitingAnimation)	_myWaitingAnimation = false;
+		else
+		{
+			_myWaitingAnimation = true;
+			Invoke("WaitForAnimation", 0.05f);
+		}
+	}
+
 }

@@ -21,6 +21,12 @@ public partial class MainCharacter : MonoBehaviour
 
 	private string _myAnimationIdle = "Pi_Idle";
 	private string _myAnimationWalking = "Pi_Walking";
-	private string _myAnimationJumping = "Pi_Jump";
+	private string _myAnimationJumping = "Pi_StartJump";
 	private string _myAnimationFalling = "Pi_Falling";
+	private string _myAnimationTouchingTheGround = "Pi_TouchingGround";
+
+	private bool _myWaitingForJumpAnticipationAnimation;
+	private bool _myJumpNextFrame;
+	private bool _myWasGroundedLastFrame;
+	private bool _myWaitingAnimation;
 }

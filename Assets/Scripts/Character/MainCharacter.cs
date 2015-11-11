@@ -18,8 +18,10 @@ public partial class MainCharacter : MonoBehaviour
 		
 		CheckDropJump ();
 
+		CheckFallingAnimation();
+
 		SmoothHorizontalSpeedAndMove ();
 
-		StoreThisFrameMovementSpeed ();
+		StoreThisFrameMovementData ();
 	}
 }
