@@ -17,7 +17,7 @@ public partial class MainCharacter : MonoBehaviour
 		_myWaitingForJumpAnticipationAnimation = false;
 		_myJumpNextFrame = false;
 		_myWasGroundedLastFrame = false;
-		_myWaitingAnimation = false;
+		_myWaitingForTouchingGround = false;
 	}
 	
 	
@@ -58,16 +58,5 @@ public partial class MainCharacter : MonoBehaviour
 	
 	#endregion
 
-
-	//Animation
-	private void WaitForAnimation()
-	{
-		if(_myWaitingAnimation)	_myWaitingAnimation = false;
-		else
-		{
-			_myWaitingAnimation = true;
-			Invoke("WaitForAnimation", 0.05f);
-		}
-	}
 
 }

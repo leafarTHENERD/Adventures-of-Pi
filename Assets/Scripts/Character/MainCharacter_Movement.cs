@@ -16,8 +16,8 @@ public partial class MainCharacter : MonoBehaviour
 		if( transform.localScale.x < 0f )
 			transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
 		
-		if( _controller.isGrounded && !_myWaitingForJumpAnticipationAnimation )
-			_animator.Play( Animator.StringToHash( _myAnimationWalking ) );
+		if( _controller.isGrounded)
+			ChangeAnimation (_myAnimationWalking);
 	}
 
 	private void MoveLeft()
@@ -27,7 +27,7 @@ public partial class MainCharacter : MonoBehaviour
 			transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
 		
 		if( _controller.isGrounded && !_myWaitingForJumpAnticipationAnimation )
-			_animator.Play( Animator.StringToHash( _myAnimationWalking ) );
+			ChangeAnimation (_myAnimationWalking);
 	}
 
 	private void StopMovingHorizontally()
@@ -35,7 +35,7 @@ public partial class MainCharacter : MonoBehaviour
 		normalizedHorizontalSpeed = 0;
 		
 		if( _controller.isGrounded && !_myWaitingForJumpAnticipationAnimation)
-			_animator.Play( Animator.StringToHash( _myAnimationIdle ) );
+			ChangeAnimation (_myAnimationIdle);
 	}
 
 	private void CheckJump()
@@ -45,9 +45,9 @@ public partial class MainCharacter : MonoBehaviour
 			Jump (jumpHeight);
 		}
 		// we can only jump whilst grounded
-		else if( _controller.isGrounded && JumpButtonPressed () && !DropJumpButtonPressed () && !_myWaitingForJumpAnticipationAnimation)
+		else if( _controller.isGrounded && JumpButtonPressed () && !DropJumpButtonPressed ())
 		{
-			_animator.Play( Animator.StringToHash( _myAnimationJumping ) );
+			ChangeAnimation (_myAnimationJumping);
 			Invoke("JumpNextFrame", 0.05f);
 			_myWaitingForJumpAnticipationAnimation = true;
 		}
@@ -117,10 +117,11 @@ public partial class MainCharacter : MonoBehaviour
 
 	private void CheckFallingAnimation()
 	{
-		if(_controller.BecameGroundedThisFrame)
+		if(_controller.BecameGroundedThisFrame && !_myWaitingForTouchingGround)
 		{
-			_animator.Play( Animator.StringToHash( _myAnimationTouchingTheGround ) );
-			WaitForAnimation ();
+			ChangeAnimation (_myAnimationTouchingTheGround);
+			_myWaitingForTouchingGround = true;
+			Invoke("EndGroundingAnimation", 0.2f);
 		}
 		else if(!_controller.isGrounded)
 		{
@@ -128,13 +129,31 @@ public partial class MainCharacter : MonoBehaviour
 			{
 				if(_velocity.y < 0)
 				{
-					_animator.Play( Animator.StringToHash( _myAnimationFalling ) );
+					ChangeAnimation (_myAnimationFalling);
 				}
 			}
 			else if(_velocity.y > 0)
 			{
-				_animator.Play( Animator.StringToHash( _myAnimationFalling ) );
+				ChangeAnimation (_myAnimationFalling);
 			}
+		}
+	}
+
+	private void EndGroundingAnimation()
+	{
+		_myWaitingForTouchingGround = false;
+	}
+
+	private bool IsAnimationLocked()
+	{
+		return _myWaitingForJumpAnticipationAnimation || _myWaitingForTouchingGround;
+	}
+
+	private void ChangeAnimation(string animation)
+	{
+		if(!IsAnimationLocked ())
+		{
+			_animator.Play(Animator.StringToHash(animation));
 		}
 	}
 
