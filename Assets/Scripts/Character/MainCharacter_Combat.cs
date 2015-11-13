@@ -64,6 +64,9 @@ public partial class MainCharacter : MonoBehaviour
 
 	private void Die()
 	{
-		Application.LoadLevel(Application.loadedLevel);
+		//Debug.Log(transform.position + "-" + Checkpoint.last_checkpoint);
+		this.transform.position = Checkpoint.last_checkpoint + respawnOffset;
+
+		SetGravityDown();
 	}
 }

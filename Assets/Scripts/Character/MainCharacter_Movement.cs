@@ -99,10 +99,19 @@ public partial class MainCharacter : MonoBehaviour
 
 	private void InvertGravity()
 	{
-		transform.localScale = transform.localScale * (-1);
+		transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * (-1), transform.localScale.z);
 		gravity = gravity * (-1);
 		_controller.isGravityDown = !_controller.isGravityDown;
 
+		Invoke("InvertGravityCameraAdjustment", 0.8f);
+	}
+
+	private void SetGravityDown()
+	{
+		transform.localScale = new Vector3(transform.localScale.x, Mathf.Abs(transform.localScale.y), transform.localScale.z);
+		gravity = Mathf.Abs(gravity) * (-1);
+		_controller.isGravityDown = true;
+		
 		Invoke("InvertGravityCameraAdjustment", 0.8f);
 	}
 
@@ -111,7 +120,8 @@ public partial class MainCharacter : MonoBehaviour
 		SmoothFollow sf = GameObject.FindObjectOfType<SmoothFollow>();
 		if(sf != null)
 		{
-			sf.cameraOffset.y *= -1;
+			if(_controller.isGravityDown) sf.cameraOffset.y = Mathf.Abs(sf.cameraOffset.y)*-1;
+			else sf.cameraOffset.y = Mathf.Abs(sf.cameraOffset.y);
 		}
 	}
 

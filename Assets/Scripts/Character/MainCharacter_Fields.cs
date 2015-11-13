@@ -10,6 +10,8 @@ public partial class MainCharacter : MonoBehaviour
 	public float groundDamping = 20f; // how fast do we change direction? higher means faster
 	public float inAirDamping = 5f;
 	public float jumpHeight = 3f;
+	public Vector3 respawnOffset;
+	public bool receiveInput;
 
 	private string _myAnimationIdle = "Pi_Idle";
 	private string _myAnimationWalking = "Pi_Walking";

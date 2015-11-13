@@ -1,0 +1,265 @@
+fileFormatVersion: 2
+guid: fb97405f5ad13a84aaf2b8d926aee1ef
+timeCreated: 1447446316
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: checkf_0
+    21300002: checkf_1
+    21300004: checkf_2
+    21300006: checkf_3
+    21300008: checkf_4
+    21300010: checkf_6
+    21300012: checkf_8
+    21300014: checkf_9
+    21300016: checkf_10
+    21300018: checkf_11
+    21300020: checkf_12
+    21300022: checkf_13
+    21300024: checkf_14
+    21300026: checkf_15
+    21300028: checkf_16
+    21300030: checkf_18
+    21300032: checkf_19
+    21300034: checkf_20
+    21300036: checkf_21
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: checkf_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1
+        width: 16
+        height: 64
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1
+        width: 16
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1
+        width: 16
+        height: 64
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1
+        width: 21
+        height: 64
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_4
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_6
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1
+        width: 28
+        height: 57
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_8
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1
+        width: 28
+        height: 52
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_9
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1
+        width: 28
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_10
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1
+        width: 25
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_11
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1
+        width: 21
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_12
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1
+        width: 16
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_13
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1
+        width: 20
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_14
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1
+        width: 24
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_15
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1
+        width: 27
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_16
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1
+        width: 28
+        height: 52
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_18
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1
+        width: 27
+        height: 57
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_19
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1
+        width: 24
+        height: 61
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_20
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1
+        width: 20
+        height: 64
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: checkf_21
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1
+        width: 16
+        height: 64
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

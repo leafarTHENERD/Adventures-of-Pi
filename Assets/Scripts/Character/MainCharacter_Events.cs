@@ -18,6 +18,10 @@ public partial class MainCharacter : MonoBehaviour
 		_myJumpNextFrame = false;
 		_myWasGroundedLastFrame = false;
 		_myWaitingForTouchingGround = false;
+
+		receiveInput = true;
+
+		Checkpoint.last_checkpoint = new Vector3(transform.position.x,transform.position.y,transform.position.z);
 	}
 	
 	
@@ -46,6 +50,23 @@ public partial class MainCharacter : MonoBehaviour
 		{
 			Die ();
 		}
+		else if(col.gameObject.CompareTag("Respawn")){
+			Debug.Log("OI");
+			Checkpoint c = col.gameObject.GetComponent<Checkpoint>();
+			c.set_lastCheckpoint();
+		}
+		else if(col.gameObject.CompareTag("End")){
+			Invoke("BossPhase",5.0f);
+
+			receiveInput = false;
+
+			AudioSource audio = Camera.main.GetComponent<AudioSource>();
+			if(audio != null){
+				audio.Stop();
+				//audio.clip
+				audio.Play();
+			}
+		}
 
 		CheckEnemiesHit (col.gameObject);
 	}
@@ -58,5 +79,8 @@ public partial class MainCharacter : MonoBehaviour
 	
 	#endregion
 
+	public void BossPhase(){
+		Application.LoadLevel("BossScene");
+	}
 
 }
