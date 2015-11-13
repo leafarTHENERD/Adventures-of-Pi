@@ -21,6 +21,7 @@ public partial class Engineer : MonoBehaviour
 	private float _myShootOffset;
 
 	public GameObject projectileObject;
+	public bool doEngineerShoot;
 	public float firstShootTime;
 	public float shootTimeDelay;
 	public float projectileSpeed;
@@ -41,7 +42,8 @@ public partial class Engineer : MonoBehaviour
 
 		_myShootOffset = IsFacingRight() ? 0.5f : -0.5f;
 
-		Invoke("Shoot", firstShootTime);
+		if(doEngineerShoot)
+			Invoke("Shoot", firstShootTime);
 	}
 	
 	
