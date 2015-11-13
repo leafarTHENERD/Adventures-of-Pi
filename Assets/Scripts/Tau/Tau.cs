@@ -74,6 +74,11 @@ public partial class Tau : MonoBehaviour
 
 	#endregion
 
+	public void DyingPhase()
+	{
+		_myAmImmune = true;
+	}
+
 	#region PhaseChangers
 
 	void PhaseNULL(){}
@@ -125,8 +130,11 @@ public partial class Tau : MonoBehaviour
 
 	public void EndPhase3()
 	{
-		_myDoneFirstCicle = false;
-		StartPhase1 ();
+		if(currentPhase != BossPhase.Dying)
+		{
+			_myDoneFirstCicle = false;
+			StartPhase1 ();
+		}
 	}
 
 	#endregion

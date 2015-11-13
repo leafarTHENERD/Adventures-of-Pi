@@ -165,7 +165,8 @@ public class Tau_Sphere : MonoBehaviour
 			_myLastPhase = _myTau.currentPhase;
 			switch(_myTau.currentPhase)
 			{
-				case Tau.BossPhase.Phase1:			
+				case Tau.BossPhase.Phase1:
+					gameObject.SetActive(true);
 					ExecutePhase = Phase1;			
 					break;
 
@@ -188,6 +189,10 @@ public class Tau_Sphere : MonoBehaviour
 
 				case Tau.BossPhase.PhaseTransition:	
 					ExecutePhase = PhaseTransition;	
+					break;
+
+				case Tau.BossPhase.Dying:
+					gameObject.SetActive(false);
 					break;
 			}
 		}

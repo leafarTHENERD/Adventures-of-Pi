@@ -10,7 +10,8 @@ public partial class Tau : MonoBehaviour
 		Phase2,
 		Phase2Ending,
 		Phase3,
-		PhaseTransition
+		PhaseTransition,
+		Dying
 	};
 	
 	void Start () 
@@ -41,6 +42,7 @@ public partial class Tau : MonoBehaviour
 	[Header("Object References")]
 	public Tau_Sphere[] bigSpheres;
 	public Tau_Sphere[] smallSpheres;
+	public SpriteRenderer deathScreen;
 
 	//Phase 1
 	[Header("Phase 1")]
@@ -75,11 +77,20 @@ public partial class Tau : MonoBehaviour
 		}
 	}
 
-	public void GotHit()
+	public bool GotHit()
 	{
-		bossCurrentHealth = bossCurrentHealth - 1;
+		bool toReturn = false;
 		_myAmImmune = true;
-		Invoke("LoseImmunity", immunityTime);
+		bossCurrentHealth = bossCurrentHealth - 1;
+		if(bossCurrentHealth == 0)
+		{
+			toReturn = true;
+			currentPhase = BossPhase.Dying;
+			ExecutePhase = DyingPhase;
+		}
+		else Invoke("LoseImmunity", immunityTime);
+
+		return toReturn;
 	}
 
 	private void LoseImmunity()
