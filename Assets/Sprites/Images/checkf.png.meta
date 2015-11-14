@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fb97405f5ad13a84aaf2b8d926aee1ef
-timeCreated: 1447446316
+timeCreated: 1447459198
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -106,8 +106,8 @@ TextureImporter:
         y: 1
         width: 21
         height: 64
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .621999979, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_4
       rect:
@@ -116,8 +116,8 @@ TextureImporter:
         y: 1
         width: 25
         height: 61
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .680000007, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_6
       rect:
@@ -126,8 +126,8 @@ TextureImporter:
         y: 1
         width: 28
         height: 57
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .720000029, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_8
       rect:
@@ -136,8 +136,8 @@ TextureImporter:
         y: 1
         width: 28
         height: 52
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .720000029, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_9
       rect:
@@ -146,8 +146,8 @@ TextureImporter:
         y: 1
         width: 28
         height: 48
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .720000029, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_10
       rect:
@@ -156,8 +156,8 @@ TextureImporter:
         y: 1
         width: 25
         height: 48
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .680000007, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_11
       rect:
@@ -166,8 +166,8 @@ TextureImporter:
         y: 1
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .623000026, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_12
       rect:
@@ -186,8 +186,8 @@ TextureImporter:
         y: 1
         width: 20
         height: 48
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .409999996, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_14
       rect:
@@ -196,8 +196,8 @@ TextureImporter:
         y: 1
         width: 24
         height: 48
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .340000004, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_15
       rect:
@@ -206,8 +206,8 @@ TextureImporter:
         y: 1
         width: 27
         height: 48
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .310000002, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_16
       rect:
@@ -216,8 +216,8 @@ TextureImporter:
         y: 1
         width: 28
         height: 52
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .289999992, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_18
       rect:
@@ -226,8 +226,8 @@ TextureImporter:
         y: 1
         width: 27
         height: 57
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .300000012, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_19
       rect:
@@ -236,8 +236,8 @@ TextureImporter:
         y: 1
         width: 24
         height: 61
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .349999994, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_20
       rect:
@@ -246,8 +246,8 @@ TextureImporter:
         y: 1
         width: 20
         height: 64
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .409999996, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: checkf_21
       rect:
