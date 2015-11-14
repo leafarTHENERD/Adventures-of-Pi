@@ -19,6 +19,7 @@ public partial class Tau : MonoBehaviour
 		_myAmImmune = false;
 		_myDoneFirstCicle = false;
 		_myAnimator = GetComponent<Animator>();
+		_myRenderer = GetComponent<SpriteRenderer>();
 		ExecutePhase = PhaseNULL;
 		Invoke("Taunt", 5.0f);
 		Invoke("StartPhase1", 7.5f);
@@ -58,6 +59,7 @@ public partial class Tau : MonoBehaviour
 
 
 	//Other privates
+	private SpriteRenderer _myRenderer;
 	private Animator _myAnimator;
 	private Action ExecutePhase;
 	private bool _myDoneFirstCicle;
@@ -85,8 +87,7 @@ public partial class Tau : MonoBehaviour
 		if(bossCurrentHealth == 0)
 		{
 			toReturn = true;
-			currentPhase = BossPhase.Dying;
-			ExecutePhase = DyingPhase;
+			Died ();
 		}
 		else Invoke("LoseImmunity", immunityTime);
 

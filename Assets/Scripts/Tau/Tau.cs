@@ -74,9 +74,21 @@ public partial class Tau : MonoBehaviour
 
 	#endregion
 
+	Color _myDyingColor;
+	Color _myDeathScreenColor;
+
 	public void DyingPhase()
 	{
+
 		_myAmImmune = true;
+
+		_myDeathScreenColor.a = Mathf.Lerp(deathScreen.color.a, 1.0f, 1.8f * Time.deltaTime);
+
+		_myDyingColor.r = Mathf.Lerp(_myRenderer.color.r, 0.0f, 4.8f * Time.deltaTime);
+		_myDyingColor.g = Mathf.Lerp(_myRenderer.color.g, 0.0f, 4.8f * Time.deltaTime);
+		_myDyingColor.b = Mathf.Lerp(_myRenderer.color.b, 0.0f, 4.8f * Time.deltaTime);
+		_myRenderer.color = _myDyingColor;
+		deathScreen.color = _myDeathScreenColor;
 	}
 
 	#region PhaseChangers
@@ -85,47 +97,65 @@ public partial class Tau : MonoBehaviour
 
 	void StartPhase1()
 	{
-		currentPhase = BossPhase.Phase1;
-		ExecutePhase = Phase1;
-		if(_myDoneFirstCicle)
-			Invoke("Phase1to3", phase1Duration);
-		else
-			Invoke("Phase1to2", phase1Duration);
-		_myAnimator.Play(Animator.StringToHash("Tau_Idle"));
+		if(currentPhase != BossPhase.Dying)
+		{
+			currentPhase = BossPhase.Phase1;
+			ExecutePhase = Phase1;
+			if(_myDoneFirstCicle)
+				Invoke("Phase1to3", phase1Duration);
+			else
+				Invoke("Phase1to2", phase1Duration);
+			_myAnimator.Play(Animator.StringToHash("Tau_Idle"));
+		}
 	}
 
 	void Phase1to2()
 	{
-		_myPhase2_InitialDistanceToCenter = Vector3.Distance(transform.position, Vector3.zero);
-		ExecutePhase = Phase2_1;
+		if(currentPhase != BossPhase.Dying)
+		{
+			_myPhase2_InitialDistanceToCenter = Vector3.Distance(transform.position, Vector3.zero);
+			ExecutePhase = Phase2_1;
+		}
 	}
 
 	void Phase1to3()
 	{
-		_myPhase2_InitialDistanceToCenter = Vector3.Distance(transform.position, Vector3.zero);
-		ExecutePhase = Phase3_1;
+		if(currentPhase != BossPhase.Dying)
+		{
+			_myPhase2_InitialDistanceToCenter = Vector3.Distance(transform.position, Vector3.zero);
+			ExecutePhase = Phase3_1;
+		}
 	}
 
 	void StartPhase2()
 	{
-		ExecutePhase = Phase2_2;
-		Invoke("EndPhase2", phase2Duration);
+		if(currentPhase != BossPhase.Dying)
+		{
+			ExecutePhase = Phase2_2;
+			Invoke("EndPhase2", phase2Duration);
+		}
 	}
 
 	void EndPhase2()
 	{
-		_myDoneFirstCicle = true;
-		ExecutePhase = PhaseNULL;
-		currentPhase = BossPhase.Phase2Ending;
-		_myAnimator.Play(Animator.StringToHash("Tau_GatheringPower"));
-		Invoke("StartPhase1", 3.0f);
+		if(currentPhase != BossPhase.Dying)
+		{
+			_myDoneFirstCicle = true;
+			ExecutePhase = PhaseNULL;
+			currentPhase = BossPhase.Phase2Ending;
+			_myAnimator.Play(Animator.StringToHash("Tau_GatheringPower"));
+			Invoke("StartPhase1", 3.0f);
+		}
 	}
 
 	void StartPhase3()
 	{
-		ExecutePhase = PhaseNULL;
-		currentPhase = BossPhase.Phase3;
-		//Invoke("EndPhase2", phase2Duration);
+		if(currentPhase != BossPhase.Dying)
+		{
+			ExecutePhase = PhaseNULL;
+			currentPhase = BossPhase.Phase3;
+			//Invoke("EndPhase2", phase2Duration);
+		}
 	}
 
 	public void EndPhase3()
@@ -135,6 +165,15 @@ public partial class Tau : MonoBehaviour
 			_myDoneFirstCicle = false;
 			StartPhase1 ();
 		}
+	}
+
+	public void Died()
+	{
+		currentPhase = BossPhase.Dying;
+		ExecutePhase = DyingPhase;
+		_myAnimator.Play(Animator.StringToHash("Tau_Die"));
+		_myDyingColor = _myRenderer.color;
+		_myDeathScreenColor = deathScreen.color;
 	}
 
 	#endregion

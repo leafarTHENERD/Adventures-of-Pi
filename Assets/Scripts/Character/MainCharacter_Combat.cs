@@ -50,7 +50,11 @@ public partial class MainCharacter : MonoBehaviour
 				{
 					if(!t.IsImmune)
 					{
-						t.GotHit ();
+						if(t.GotHit ())
+						{
+							receiveInput = false;
+						}
+
 						Jump (jumpHeight * 0.8f);
 					}
 				}
@@ -68,5 +72,7 @@ public partial class MainCharacter : MonoBehaviour
 		this.transform.position = Checkpoint.last_checkpoint + respawnOffset;
 
 		SetGravityDown();
+
+		receiveInput = true;
 	}
 }
