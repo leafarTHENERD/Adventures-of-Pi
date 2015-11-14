@@ -51,19 +51,21 @@ public partial class MainCharacter : MonoBehaviour
 			Die ();
 		}
 		else if(col.gameObject.CompareTag("Respawn")){
-			Debug.Log("OI");
+
 			Checkpoint c = col.gameObject.GetComponent<Checkpoint>();
 			c.set_lastCheckpoint();
 		}
 		else if(col.gameObject.CompareTag("End")){
-			Invoke("BossPhase",5.0f);
+			Invoke("BossPhase",2.8f);
 
 			receiveInput = false;
-
+			AudioClip music = Resources.Load<AudioClip>("SoundsToBeLoaded/Stage Clear - Kirby and the Rainbow Curse [OST]");
 			AudioSource audio = Camera.main.GetComponent<AudioSource>();
 			if(audio != null){
+				//Debug.Log(music.name);
 				audio.Stop();
-				//audio.clip
+				audio.clip = music;
+				audio.loop = false;
 				audio.Play();
 			}
 		}
