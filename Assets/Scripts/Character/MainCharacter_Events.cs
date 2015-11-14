@@ -48,7 +48,9 @@ public partial class MainCharacter : MonoBehaviour
 		}
 		else if(col.gameObject.CompareTag("EnemyProjectiles"))
 		{
-			Die ();
+			Tau t = (Tau) GameObject.FindObjectOfType(typeof(Tau));
+			if(t != null) Invoke("ResetBoss",0.05f);
+			else Die ();
 		}
 		else if(col.gameObject.CompareTag("Respawn")){
 

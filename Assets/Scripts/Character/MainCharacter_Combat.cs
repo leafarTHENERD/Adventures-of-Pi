@@ -59,11 +59,18 @@ public partial class MainCharacter : MonoBehaviour
 					}
 				}
 				else if(!t.IsImmune)
-				{
-					Die ();
+				{	
+					//Debug.Log("BOSSSSS HIT");
+					Invoke("ResetBoss",0.05f);
+					//Die ();
 				}
 			}
 		}
+	}
+
+	private void ResetBoss(){
+		//Debug.Log("BOSS HIT");
+		Application.LoadLevel(Application.loadedLevel);
 	}
 
 	private void Die()
