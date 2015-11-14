@@ -10,9 +10,10 @@ public class StartMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.anyKeyDown){
-			//Random scene = new Random();
-			//int sceneId = scene.Next(0,5);
+		if(Input.anyKeyDown)
+		{
+			int sceneID = Random.Range(1,4);
+			Application.LoadLevel(sceneID);
 		}
 	}
 }

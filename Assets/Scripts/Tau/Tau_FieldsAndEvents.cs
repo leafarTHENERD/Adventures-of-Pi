@@ -11,13 +11,15 @@ public partial class Tau : MonoBehaviour
 		Phase2Ending,
 		Phase3,
 		PhaseTransition,
-		Dying
+		Dying,
+		Dead
 	};
 	
 	void Start () 
 	{
 		_myAmImmune = false;
 		_myDoneFirstCicle = false;
+		_myFirstDyingCicle = false;
 		_myAnimator = GetComponent<Animator>();
 		_myRenderer = GetComponent<SpriteRenderer>();
 		ExecutePhase = PhaseNULL;
@@ -27,6 +29,7 @@ public partial class Tau : MonoBehaviour
 
 	void Update () 
 	{
+		Debug.Log(currentPhase);
 		ExecutePhase ();
 	}
 
@@ -43,6 +46,7 @@ public partial class Tau : MonoBehaviour
 	[Header("Object References")]
 	public Tau_Sphere[] bigSpheres;
 	public Tau_Sphere[] smallSpheres;
+	public GameObject explosionObject;
 	public SpriteRenderer deathScreen;
 
 	//Phase 1
@@ -63,6 +67,9 @@ public partial class Tau : MonoBehaviour
 	private Animator _myAnimator;
 	private Action ExecutePhase;
 	private bool _myDoneFirstCicle;
+	private Color _myDyingColor;
+	private Color _myDeathScreenColor;
+	private bool _myFirstDyingCicle;
 	public bool FirstCicle
 	{
 		get

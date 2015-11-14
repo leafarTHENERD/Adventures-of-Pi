@@ -73,20 +73,30 @@ public partial class Tau : MonoBehaviour
 	}
 
 	#endregion
-
-	Color _myDyingColor;
-	Color _myDeathScreenColor;
-
+	
 	public void DyingPhase()
 	{
-
 		_myAmImmune = true;
 
-		_myDeathScreenColor.a = Mathf.Lerp(deathScreen.color.a, 1.0f, 1.8f * Time.deltaTime);
+		if(currentPhase == BossPhase.Dead)
+		{
+			Debug.Log("A");
+			_myDeathScreenColor.a = Mathf.Lerp(deathScreen.color.a, 0.0f, 0.8f * Time.deltaTime);
+		}
+		else if(_myFirstDyingCicle)
+		{
+			Debug.Log("B");
+			_myDyingColor.a = Mathf.Lerp(_myRenderer.color.a, 0.0f, 2.8f * Time.deltaTime);
+		}
+		else
+		{
+			Debug.Log("C");
+			_myDeathScreenColor.a = Mathf.Lerp(deathScreen.color.a, 1.0f, 1.8f * Time.deltaTime);
 
-		_myDyingColor.r = Mathf.Lerp(_myRenderer.color.r, 0.0f, 4.8f * Time.deltaTime);
-		_myDyingColor.g = Mathf.Lerp(_myRenderer.color.g, 0.0f, 4.8f * Time.deltaTime);
-		_myDyingColor.b = Mathf.Lerp(_myRenderer.color.b, 0.0f, 4.8f * Time.deltaTime);
+			_myDyingColor.r = Mathf.Lerp(_myRenderer.color.r, 0.0f, 4.8f * Time.deltaTime);
+			_myDyingColor.g = Mathf.Lerp(_myRenderer.color.g, 0.0f, 4.8f * Time.deltaTime);
+			_myDyingColor.b = Mathf.Lerp(_myRenderer.color.b, 0.0f, 4.8f * Time.deltaTime);
+		}
 		_myRenderer.color = _myDyingColor;
 		deathScreen.color = _myDeathScreenColor;
 	}
@@ -97,7 +107,7 @@ public partial class Tau : MonoBehaviour
 
 	void StartPhase1()
 	{
-		if(currentPhase != BossPhase.Dying)
+		if(IsNotDying)
 		{
 			currentPhase = BossPhase.Phase1;
 			ExecutePhase = Phase1;
@@ -111,7 +121,7 @@ public partial class Tau : MonoBehaviour
 
 	void Phase1to2()
 	{
-		if(currentPhase != BossPhase.Dying)
+		if(IsNotDying)
 		{
 			_myPhase2_InitialDistanceToCenter = Vector3.Distance(transform.position, Vector3.zero);
 			ExecutePhase = Phase2_1;
@@ -120,7 +130,7 @@ public partial class Tau : MonoBehaviour
 
 	void Phase1to3()
 	{
-		if(currentPhase != BossPhase.Dying)
+		if(IsNotDying)
 		{
 			_myPhase2_InitialDistanceToCenter = Vector3.Distance(transform.position, Vector3.zero);
 			ExecutePhase = Phase3_1;
@@ -129,7 +139,7 @@ public partial class Tau : MonoBehaviour
 
 	void StartPhase2()
 	{
-		if(currentPhase != BossPhase.Dying)
+		if(IsNotDying)
 		{
 			ExecutePhase = Phase2_2;
 			Invoke("EndPhase2", phase2Duration);
@@ -138,7 +148,7 @@ public partial class Tau : MonoBehaviour
 
 	void EndPhase2()
 	{
-		if(currentPhase != BossPhase.Dying)
+		if(IsNotDying)
 		{
 			_myDoneFirstCicle = true;
 			ExecutePhase = PhaseNULL;
@@ -150,7 +160,7 @@ public partial class Tau : MonoBehaviour
 
 	void StartPhase3()
 	{
-		if(currentPhase != BossPhase.Dying)
+		if(IsNotDying)
 		{
 			ExecutePhase = PhaseNULL;
 			currentPhase = BossPhase.Phase3;
@@ -160,7 +170,7 @@ public partial class Tau : MonoBehaviour
 
 	public void EndPhase3()
 	{
-		if(currentPhase != BossPhase.Dying)
+		if(IsNotDying)
 		{
 			_myDoneFirstCicle = false;
 			StartPhase1 ();
@@ -174,6 +184,57 @@ public partial class Tau : MonoBehaviour
 		_myAnimator.Play(Animator.StringToHash("Tau_Die"));
 		_myDyingColor = _myRenderer.color;
 		_myDeathScreenColor = deathScreen.color;
+
+		AudioClip _myClip = Resources.Load<AudioClip>("SoundsToBeLoaded/BossExplosion");
+		AudioSource _myAudioSource = Camera.main.GetComponent<AudioSource>();
+		if(_myAudioSource != null)
+		{
+			_myAudioSource.Stop ();
+			_myAudioSource.clip = _myClip;
+			_myAudioSource.loop = false;
+			_myAudioSource.Play ();
+			Invoke("Explosion", 0.3f);
+			Invoke("EndDyingCicle", 2.5f);
+			Invoke("EndDyingPhase", 5.0f);
+		}
+	}
+
+	public void EndDyingCicle()
+	{
+		_myFirstDyingCicle = true;
+	}
+
+	public void EndDyingPhase()
+	{
+		currentPhase = BossPhase.Dead;
+		Invoke("PlayWinMusic", 3.0f);
+	}
+
+	public void PlayWinMusic()
+	{
+		Invoke("EndGame", 4.0f);
+		AudioClip _myClip = Resources.Load<AudioClip>("SoundsToBeLoaded/Stage Clear - Kirby and the Rainbow Curse [OST]");
+		AudioSource _myAudioSource = Camera.main.GetComponent<AudioSource>();
+		if(_myAudioSource != null)
+		{
+			_myAudioSource.Stop ();
+			_myAudioSource.clip = _myClip;
+			_myAudioSource.loop = false;
+			_myAudioSource.Play ();
+		}
+	}
+
+	public void EndGame()
+	{
+		Application.LoadLevel(0);
+	}
+
+	public bool IsNotDying
+	{
+		get 
+		{
+			return (currentPhase != BossPhase.Dying) && (currentPhase != BossPhase.Dead);
+		}
 	}
 
 	#endregion
@@ -181,6 +242,15 @@ public partial class Tau : MonoBehaviour
 	void Taunt()
 	{
 		_myAnimator.Play(Animator.StringToHash("Tau_Action"));
+	}
+	
+	void Explosion()
+	{
+		Vector3 pos = UnityEngine.Random.insideUnitSphere * 2.0f;
+		pos.z = 0.0f;
+		GameObject.Instantiate(explosionObject, pos, Quaternion.identity);
+		if(currentPhase == BossPhase.Dying)
+			Invoke("Explosion", 0.3f);
 	}
 
 
