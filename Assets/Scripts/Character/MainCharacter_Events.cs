@@ -16,7 +16,6 @@ public partial class MainCharacter : MonoBehaviour
 
 		_myWaitingForJumpAnticipationAnimation = false;
 		_myJumpNextFrame = false;
-		_myWasGroundedLastFrame = false;
 		_myWaitingForTouchingGround = false;
 
 		receiveInput = true;

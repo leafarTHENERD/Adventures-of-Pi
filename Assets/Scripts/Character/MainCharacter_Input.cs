@@ -13,26 +13,26 @@ public partial class MainCharacter : MonoBehaviour
 
 	private bool MoveRightButtonPressed()
 	{
-		return Input.GetKey( KeyCode.D ) && receiveInput;
+		return (Input.GetKey( KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && receiveInput;
 	}
 
 	private bool MoveLeftButtonPressed()
 	{
-		return Input.GetKey( KeyCode.A ) && receiveInput;
+		return (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && receiveInput;
 	}
 
 	private bool JumpButtonPressed()
 	{
-		return (Input.GetKeyDown( KeyCode.W ) || Input.GetKeyDown( KeyCode.Space )) && receiveInput;
+		return (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && receiveInput;
 	}
 
 	private bool JumpButtonReleased()
 	{
-		return (Input.GetKeyUp( KeyCode.W ) || Input.GetKeyUp( KeyCode.Space )) && receiveInput;
+		return (Input.GetKeyUp( KeyCode.W ) || Input.GetKeyUp(KeyCode.UpArrow)) && receiveInput;
 	}
 
 	private bool DropJumpButtonPressed()
 	{
-		return Input.GetKey( KeyCode.S ) && receiveInput;
+		return (Input.GetKey( KeyCode.S ) || Input.GetKey(KeyCode.DownArrow)) && receiveInput;
 	}
 }

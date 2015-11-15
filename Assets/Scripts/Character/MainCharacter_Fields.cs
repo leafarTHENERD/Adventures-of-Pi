@@ -29,6 +29,5 @@ public partial class MainCharacter : MonoBehaviour
 
 	private bool _myWaitingForJumpAnticipationAnimation;
 	private bool _myJumpNextFrame;
-	private bool _myWasGroundedLastFrame;
 	private bool _myWaitingForTouchingGround;
 }
