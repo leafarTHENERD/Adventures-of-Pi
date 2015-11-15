@@ -29,7 +29,6 @@ public partial class Tau : MonoBehaviour
 
 	void Update () 
 	{
-		Debug.Log(currentPhase);
 		ExecutePhase ();
 	}
 

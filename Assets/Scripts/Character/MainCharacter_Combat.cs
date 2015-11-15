@@ -81,5 +81,7 @@ public partial class MainCharacter : MonoBehaviour
 		SetGravityDown();
 
 		receiveInput = true;
+
+		_velocity = Vector3.zero;
 	}
 }

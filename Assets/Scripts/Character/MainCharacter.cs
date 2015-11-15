@@ -23,5 +23,8 @@ public partial class MainCharacter : MonoBehaviour
 		SmoothHorizontalSpeedAndMove ();
 
 		StoreThisFrameMovementData ();
+
+		if(Input.GetKeyDown(KeyCode.Escape))
+			Application.LoadLevel(0);
 	}
 }

@@ -80,17 +80,14 @@ public partial class Tau : MonoBehaviour
 
 		if(currentPhase == BossPhase.Dead)
 		{
-			Debug.Log("A");
 			_myDeathScreenColor.a = Mathf.Lerp(deathScreen.color.a, 0.0f, 0.8f * Time.deltaTime);
 		}
 		else if(_myFirstDyingCicle)
 		{
-			Debug.Log("B");
 			_myDyingColor.a = Mathf.Lerp(_myRenderer.color.a, 0.0f, 2.8f * Time.deltaTime);
 		}
 		else
 		{
-			Debug.Log("C");
 			_myDeathScreenColor.a = Mathf.Lerp(deathScreen.color.a, 1.0f, 1.8f * Time.deltaTime);
 
 			_myDyingColor.r = Mathf.Lerp(_myRenderer.color.r, 0.0f, 4.8f * Time.deltaTime);

@@ -12,7 +12,7 @@ public class StartMenu : MonoBehaviour {
 	void Update () {
 		if(Input.anyKeyDown)
 		{
-			int sceneID = Random.Range(1,4);
+			int sceneID = Random.Range(1,5);
 			Application.LoadLevel(sceneID);
 		}
 	}

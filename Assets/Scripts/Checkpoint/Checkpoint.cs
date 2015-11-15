@@ -25,12 +25,14 @@ public class Checkpoint : MonoBehaviour {
 		if(!this.is_active){
 			last_checkpoint = this.transform.position;
 			this.is_active = true;
-
-
-			//Debug.Log("WHY");
-			_myAnimator.Play(Animator.StringToHash("Activating"));
 			_myAudioSource.PlayOneShot(_myAudioSource.clip);
+			Invoke("AnimateCheckpoint", 0.5f);
 		}
+	}
+
+	public void AnimateCheckpoint()
+	{
+		_myAnimator.Play(Animator.StringToHash("Activating"));
 	}
 	
 }
