@@ -27,7 +27,9 @@ You will need the unity(or the web player) installed to play the game. You can d
 # Download
 Windows Version : 
 [DOWNLOAD](https://github.com/leafarTHENERD/Adventures-of-Pi/blob/master/AdventuresOfPi.exe?raw=true)
+
 ---
+
 Web Version : 
 [DOWNLOAD](https://github.com/leafarTHENERD/Adventures-of-Pi/blob/master/AdvetureOfPi.zip?raw=true)
 
